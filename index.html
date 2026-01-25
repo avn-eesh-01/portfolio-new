@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avneesh Kumar | Creative Portfolio</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simple-icons-font@v7/css/simple-icons.min.css">
+    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+    <!-- Three.js for hero background animation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <!-- GSAP for smooth animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="dark-mode">
+    <header>
+        <nav>
+
+            <div class="nav-container">
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="theme-toggle">
+
+                </div>
+            </div>
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero-section">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <div class="tag">Software Developer</div>
+                        <h1>Hello, I'm <span class="highlight">Avneesh Kumar</span></h1>
+                        <p>Building creative and functional applications with a focus on user experience and modern
+                            technologies. Currently pursuing BCA and specializing in Android Development with Kotlin.
+                        </p>
+                        <div class="cta-buttons">
+                            <a href="#projects" class="btn-primary">View My Work</a>
+                            <a href="#contact" class="btn-outline">Get In Touch</a>
+                        </div>
+                        <div class="social-icons">
+                            <a href="https://github.com/avn-eesh-01" target="_blank" aria-label="GitHub"><i
+                                    class="fab fa-github"></i></a>
+                            <a href="https://www.linkedin.com/in/avneesh-kumar-a5905324b/" target="_blank"
+                                aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="mailto:avneesh@example.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                    <div class="hero-image">
+                        <div class="image-wrapper">
+                            <img src="/assets/Avneesh - Photo.jpg" alt="Avneesh Kumar" />
+                            <div class="overlay"></div>
+                        </div>
+                        <div class="shape shape-1"></div>
+                        <div class="shape shape-2"></div>
+                        <div class="social-badge">
+                            <a href="https://github.com/avn-eesh-01" target="_blank">
+                                <i class="fab fa-github"></i>
+                                <span>avn-eesh-01</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <span>Scroll</span>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </section>
+
+        <section id="about" class="about-section about-section-new">
+            <div class="container">
+                <div class="about-new-content">
+                    <div class="about-new-text">
+                        <span class="about-label">MORE ABOUT ME</span>
+                        <h2 class="about-heading">I'm Avneesh, a<br>creative <em>engineer</em></h2>
+                        <p class="about-description">I'm Avneesh Kumar, a proactive full-stack developer passionate
+                            about creating dynamic web experiences. From frontend to backend, I thrive on solving
+                            complex problems with clean, efficient code. My expertise spans React, Next.js, and Node.js,
+                            and I'm always eager to learn more.</p>
+                        <p class="about-description">When I'm not immersed in work, I'm exploring new ideas and staying
+                            curious. Life's about balance, and I love embracing every part of it.</p>
+                        <p class="about-quote">I believe in waking up each day eager to make a difference!</p>
+                        <div class="about-social-icons">
+                            <a href="https://www.linkedin.com/in/avneesh-kumar-a5905324b/" target="_blank"
+                                aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://github.com/avn-eesh-01" target="_blank" aria-label="GitHub"><i
+                                    class="fab fa-github"></i></a>
+                            <a href="#" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                    <div class="about-new-images">
+                        <div class="about-image-stack">
+                            <div class="about-image-card about-image-1">
+                                <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=500&fit=crop"
+                                    alt="Mountain landscape" />
+                            </div>
+                            <div class="about-image-card about-image-2">
+                                <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=400&h=500&fit=crop"
+                                    alt="Mountain adventure" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="projects-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Featured Projects</h2>
+                    <div class="section-line"></div>
+                </div>
+                <div class="project-filter">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="web">Web</button>
+                    <button class="filter-btn" data-filter="mobile">Mobile</button>
+                    <button class="filter-btn" data-filter="other">Other</button>
+                </div>
+                <div class="projects-grid">
+                    <div class="project-card" data-category="web">
+                        <div class="project-image">
+                            <img src="https://placehold.co/600x400/1e293b/4cc9f0" alt="PHP Project" />
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="https://kodify.in" target="_blank" class="project-link">
+                                        <i class="fas fa-link"></i>
+                                    </a>
+                                    <a href="https://github.com/avn-eesh-01/php-project" target="_blank"
+                                        class="project-link">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-title">Kodify Website</h3>
+                            <p class="project-description">I developed the website of Kodify, a development agency. I
+                                used HTML, Tailwind CSS, Javascript and PHP to create this website. I integrated blog
+                                system, contact form, and other features to make it interactive and user-friendly.</p>
+                            <div class="project-tech">
+                                <span>PHP</span>
+                                <span>MySQL</span>
+                                <span>HTML/CSS</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card" data-category="other">
+                        <div class="project-image">
+                            <img src="https://placehold.co/600x400/1e293b/4895ef" alt="Array Operations" />
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="https://github.com/avn-eesh-01/Array-Operations" target="_blank"
+                                        class="project-link">
+                                        <i class="fas fa-link"></i>
+                                    </a>
+                                    <a href="https://github.com/avn-eesh-01/Array-Operations" target="_blank"
+                                        class="project-link">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-title">Upsight</h3>
+                            <p class="project-description">Branding Agency website built using html, css, JavaScript and
+                                GSAP</p>
+                            <div class="project-tech">
+                                <span>C</span>
+                                <span>Data Structures</span>
+                                <span>Algorithms</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card" data-category="web">
+                        <div class="project-image">
+                            <img src="https://placehold.co/600x400/1e293b/3a0ca3" alt="BEATsBINDER" />
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="https://github.com/avn-eesh-01/BEATsBINDER" target="_blank"
+                                        class="project-link">
+                                        <i class="fas fa-link"></i>
+                                    </a>
+                                    <a href="https://github.com/avn-eesh-01/BEATsBINDER" target="_blank"
+                                        class="project-link">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-title">BEATsBINDER</h3>
+                            <p class="project-description">A web application for music enthusiasts to discover, organize
+                                and share their favorite music collections.</p>
+                            <div class="project-tech">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="projects-cta">
+                    <a href="https://github.com/avn-eesh-01" class="btn-outline">View More Projects</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="skills-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Skills & Expertise</h2>
+                    <div class="section-line"></div>
+                </div>
+                <div class="skills-content">
+                    <div class="skills-text">
+                        <h3>Technical Proficiency</h3>
+                        <p>I've developed a diverse set of skills throughout my journey as a developer. My current focus
+                            is on Android Development with Kotlin, but I'm also experienced in web technologies and
+                            programming fundamentals.</p>
+                        <p>I'm always learning and expanding my skillset to stay current with industry trends and best
+                            practices.</p>
+                        <div class="skill-stats">
+                            <div class="stat-item">
+                                <div class="stat-number">13</div>
+                                <div class="stat-label">Projects</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">5+</div>
+                                <div class="stat-label">Technologies</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">1+</div>
+                                <div class="stat-label">Years Experience</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skills-cards">
+                        <div class="skill-category">
+                            <h3>Frontend Development</h3>
+                            <div class="skills-grid">
+                                <div class="skill-card">
+                                    <i class="fab fa-html5"></i>
+                                    <h4>HTML5</h4>
+                                </div>
+                                <div class="skill-card">
+                                    <i class="fab fa-css3-alt"></i>
+                                    <h4>CSS3</h4>
+                                </div>
+                                <div class="skill-card">
+                                    <i class="fab fa-js"></i>
+                                    <h4>JavaScript</h4>
+                                </div>
+                                <div class="skill-card">
+                                    <i class="fab fa-react"></i>
+                                    <h4>React</h4>
+                                </div>
+                                <div class="skill-card">
+                                    <span class="iconify" data-icon="simple-icons:tailwindcss"
+                                        style="font-size: 40px; color: #ff2e2e;"></span>
+                                    <h4>Tailwind</h4>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="skill-category">
+                            <h3>Backend & Database</h3>
+                            <div class="skills-grid">
+                                <div class="skill-card">
+                                    <i class="fab fa-php"></i>
+                                    <h4>PHP</h4>
+                                </div>
+                                <div class="skill-card">
+                                    <i class="fas fa-database"></i>
+                                    <h4>MySQL</h4>
+                                </div>
+                                <div class="skill-card">
+                                    <span class="iconify" data-icon="simple-icons:mongodb"
+                                        style="font-size: 40px; color: #ff2e2e;"></span>
+                                    <h4>MongoDB</h4>
+                                </div>
+
+                                <div class="skill-card">
+                                    <i class="fab fa-node"></i>
+                                    <h4>Node.js</h4>
+                                </div>
+                                <div class="skill-card">
+                                    <span class="iconify" data-icon="simple-icons:express"
+                                        style="font-size: 40px; color: #ff2e2e;"></span>
+                                    <h4>Express.js</h4>
+                                </div>
+
+                                <div class="skill-card">
+                                    <i class="fab fa-python"></i>
+                                    <h4>Python</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skill-category">
+                            <h3>Mobile & Other</h3>
+                            <div class="skills-grid">
+                                <div class="skill-card">
+                                    <i class="fab fa-android"></i>
+                                    <h4>Android</h4>
+                                </div>
+                                <div class="skill-card">
+                                    <span class="iconify" data-icon="simple-icons:flutter"
+                                        style="font-size: 40px; color: #ff2e2e;"></span>
+                                    <h4>Flutter</h4>
+                                </div>
+                                <div class="skill-card">
+                                    <i class="fas fa-code"></i>
+                                    <h4>C</h4>
+                                </div>
+                                <div class="skill-card">
+                                    <i class="fab fa-git-alt"></i>
+                                    <h4>Git/GitHub</h4>
+                                </div>
+                                <div class="skill-card">
+                                    <span class="iconify" data-icon="simple-icons:postman"
+                                        style="font-size:44px; color: #ff2e2e;"></span>
+                                    <h4>Postman</h4>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- GitHub Contribution Graph Section -->
+        <section id="contributions" class="contributions-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">GitHub Contribution Graph</h2>
+                    <div class="section-line"></div>
+                </div>
+                <div class="contributions-wrapper">
+                    <div class="contributions-container">
+                        <div class="contributions-graph">
+                            <div class="months-row">
+                                <span>Jan</span>
+                                <span>Feb</span>
+                                <span>Mar</span>
+                                <span>Apr</span>
+                                <span>May</span>
+                                <span>Jun</span>
+                                <span>Jul</span>
+                                <span>Aug</span>
+                                <span>Sep</span>
+                                <span>Oct</span>
+                                <span>Nov</span>
+                                <span>Dec</span>
+                            </div>
+                            <div class="graph-grid" id="contributionGraph">
+                                <!-- Grid will be populated by JavaScript -->
+                            </div>
+                            <div class="graph-footer">
+                                <span class="contribution-count" id="contributionCount">Loading contributions...</span>
+                                <div class="legend">
+                                    <span>Less</span>
+                                    <div class="legend-squares">
+                                        <span class="legend-square level-0"></span>
+                                        <span class="legend-square level-1"></span>
+                                        <span class="legend-square level-2"></span>
+                                        <span class="legend-square level-3"></span>
+                                        <span class="legend-square level-4"></span>
+                                    </div>
+                                    <span>More</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="year-selector">
+                        <button class="year-btn active" data-year="2026">2026</button>
+                        <button class="year-btn" data-year="2025">2025</button>
+                        <button class="year-btn" data-year="2024">2024</button>
+                        <button class="year-btn" data-year="2023">2023</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Get In Touch</h2>
+                    <div class="section-line"></div>
+                </div>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <h3>Email</h3>
+                            <p>avneesh@example.com</p>
+                            <a href="mailto:avneesh@example.com" class="contact-link">Send Email</a>
+                        </div>
+                        <div class="contact-card linkedin-card">
+                            <div class="contact-icon">
+                                <i class="fab fa-linkedin-in"></i>
+                            </div>
+                            <h3>LinkedIn</h3>
+                            <p>Connect with me</p>
+                            <a href="https://www.linkedin.com/in/avneesh-kumar-a5905324b/" target="_blank"
+                                class="contact-link">View Profile</a>
+                        </div>
+                        <div class="contact-card github-card">
+                            <div class="contact-icon">
+                                <i class="fab fa-github"></i>
+                            </div>
+                            <h3>GitHub</h3>
+                            <p>Check my repositories</p>
+                            <a href="https://github.com/avn-eesh-01" target="_blank" class="contact-link">View
+                                Profile</a>
+                        </div>
+                    </div>
+                    <div class="contact-form-container">
+                        <h3>Send Me a Message</h3>
+                        <form class="contact-form">
+                            <div class="form-group">
+                                <label for="name">Your Name</label>
+                                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Your Email</label>
+                                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Subject</label>
+                                <input type="text" id="subject" name="subject" placeholder="Enter subject" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" rows="5" placeholder="Enter your message"
+                                    required></textarea>
+                            </div>
+                            <button type="submit" class="btn-primary">
+                                <i class="fas fa-paper-plane"></i> Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <a href="#"><span>A</span>vneesh</a>
+                    <p>Software Developer</p>
+                </div>
+
+                <div class="footer-social">
+                    <a href="https://github.com/avn-eesh-01" target="_blank" aria-label="GitHub"><i
+                            class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/avneesh-kumar-a5905324b/" target="_blank"
+                        aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="mailto:avneesh@example.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Avneesh Kumar. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Dark Mode Toggle
+            const darkModeToggle = document.getElementById('darkModeToggle');
+            const body = document.body;
+
+            // Check for saved dark mode preference
+            const savedDarkMode = localStorage.getItem('darkMode');
+            if (savedDarkMode === 'false') {
+                body.classList.remove('dark-mode');
+                darkModeToggle.checked = false;
+            }
+
+            darkModeToggle.addEventListener('change', function () {
+                if (this.checked) {
+                    body.classList.add('dark-mode');
+                    localStorage.setItem('darkMode', 'true');
+                } else {
+                    body.classList.remove('dark-mode');
+                    localStorage.setItem('darkMode', 'false');
+                }
+            });
+
+            // Mobile Menu Toggle
+            const menuToggle = document.querySelector('.menu-toggle');
+            const navContainer = document.querySelector('.nav-container');
+
+            menuToggle.addEventListener('click', function () {
+                this.classList.toggle('active');
+                navContainer.classList.toggle('active');
+            });
+            // Smooth Scrolling
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+
+                    if (targetElement) {
+                        // Get the height of the header for proper offset calculation
+                        const headerHeight = document.querySelector('header').offsetHeight;
+
+                        window.scrollTo({
+                            top: targetElement.offsetTop - headerHeight - 20, // Dynamic offset based on header height plus a little padding
+                            behavior: 'smooth'
+                        });
+                        // Update the URL hash without default jump
+                        if (history.pushState) {
+                            history.pushState(null, '', targetId);
+                        } else {
+                            window.location.hash = targetId;
+                        }
+
+                        // Close mobile menu if open
+                        menuToggle.classList.remove('active');
+                        navContainer.classList.remove('active');
+
+                        // Update active link
+                        document.querySelectorAll('.nav-links a').forEach(link => {
+                            link.classList.remove('active');
+                        });
+                        this.classList.add('active');
+                    }
+                });
+            });
+
+            // Project Filtering
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const projectCards = document.querySelectorAll('.project-card');
+
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function () {
+                    // Update active button
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    this.classList.add('active');
+
+                    const filter = this.getAttribute('data-filter');
+
+                    projectCards.forEach(card => {
+                        if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                            card.style.display = 'block';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+
+            // Scroll-based animations
+            const scrollElements = document.querySelectorAll('.section-header, .about-content, .project-card, .skill-category, .contact-card');
+
+            const elementInView = (el, scrollOffset = 100) => {
+                const elementTop = el.getBoundingClientRect().top;
+                return (elementTop <= window.innerHeight - scrollOffset);
+            };
+
+            const displayScrollElement = (element) => {
+                element.classList.add('scrolled');
+            };
+
+            const hideScrollElement = (element) => {
+                element.classList.remove('scrolled');
+            };
+
+            const handleScrollAnimation = () => {
+                scrollElements.forEach((el) => {
+                    if (elementInView(el, 100)) {
+                        displayScrollElement(el);
+                    } else {
+                        hideScrollElement(el);
+                    }
+                });
+            };
+
+            // Initialize
+            window.addEventListener('scroll', () => {
+                handleScrollAnimation();
+            });
+
+            // Show initially visible elements
+            handleScrollAnimation();
+
+            // Update active nav link based on scroll or hash
+            const sections = document.querySelectorAll('section');
+
+            // Use IntersectionObserver for accurate active detection
+            const setActiveLink = (id) => {
+                if (!id) return;
+                const selector = `.nav-links a[href="#${id}"]`;
+                const targetLink = document.querySelector(selector);
+                if (!targetLink) return;
+                document.querySelectorAll('.nav-links a').forEach(l => l.classList.remove('active'));
+                targetLink.classList.add('active');
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                // Pick the entry with the highest intersection ratio that is intersecting
+                let best = null;
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        if (!best || entry.intersectionRatio > best.intersectionRatio) {
+                            best = entry;
+                        }
+                    }
+                });
+                if (best) {
+                    setActiveLink(best.target.id);
+                }
+            }, {
+                root: null,
+                threshold: [0.3, 0.5, 0.7],
+                // Center bias: triggers when the center 40% is near the section
+                rootMargin: "-40% 0px -40% 0px"
+            });
+
+            sections.forEach(sec => observer.observe(sec));
+
+            const setActiveFromHash = () => {
+                const hash = window.location.hash;
+                if (!hash) return false;
+                const targetLink = document.querySelector(`.nav-links a[href='${hash}']`);
+                if (targetLink) {
+                    document.querySelectorAll('.nav-links a').forEach(l => l.classList.remove('active'));
+                    targetLink.classList.add('active');
+                    return true;
+                }
+                return false;
+            };
+
+            // On initial load: try hash first. Observer will handle scroll updates
+            if (!setActiveFromHash()) {
+                // set the first section as active until observer fires
+                setActiveLink(sections[0]?.id);
+            }
+
+            // Respond to hash changes and scrolling
+            window.addEventListener('hashchange', () => {
+                setActiveFromHash();
+            });
+        });
+    </script>
+
+    <script>
+        // Additional smooth scrolling for all links
+        document.addEventListener('DOMContentLoaded', function () {
+            // Handle links that might point to different pages but with #top or #bottom
+            document.body.addEventListener('click', function (e) {
+                // Check if the clicked element is a link
+                if (e.target.tagName === 'A' || e.target.closest('a')) {
+                    const link = e.target.tagName === 'A' ? e.target : e.target.closest('a');
+                    const href = link.getAttribute('href');
+
+                    // Handle links to #top
+                    if (href === '#top' || href.endsWith('#top')) {
+                        e.preventDefault();
+                        window.scrollTo({
+                            top: 0,
+                            behavior: 'smooth'
+                        });
+                    }
+
+                    // Handle links to #bottom
+                    if (href === '#bottom' || href.endsWith('#bottom')) {
+                        e.preventDefault();
+                        window.scrollTo({
+                            top: document.body.scrollHeight,
+                            behavior: 'smooth'
+                        });
+                    }
+                }
+            });
+        });
+    </script>
+
+    <!-- GitHub Contribution Graph Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const contributionGraph = document.getElementById('contributionGraph');
+            const contributionCount = document.getElementById('contributionCount');
+            const yearButtons = document.querySelectorAll('.year-btn');
+            const GITHUB_USERNAME = 'avn-eesh-01';
+
+            // Cache for contribution data
+            const contributionCache = {};
+
+            // Fetch contributions from GitHub using the public contributions API
+            async function fetchGitHubContributions(username, year) {
+                const cacheKey = `${username}-${year}`;
+                if (contributionCache[cacheKey]) {
+                    return contributionCache[cacheKey];
+                }
+
+                try {
+                    // Using GitHub's public contribution calendar via a proxy service
+                    const response = await fetch(`https://github-contributions-api.jogruber.de/v4/${username}?y=${year}`);
+
+                    if (!response.ok) {
+                        throw new Error('Failed to fetch contributions');
+                    }
+
+                    const data = await response.json();
+                    contributionCache[cacheKey] = data;
+                    return data;
+                } catch (error) {
+                    console.error('Error fetching GitHub contributions:', error);
+                    return null;
+                }
+            }
+
+            // Convert contribution count to level (0-4)
+            function getContributionLevel(count) {
+                if (count === 0) return 0;
+                if (count <= 3) return 1;
+                if (count <= 6) return 2;
+                if (count <= 9) return 3;
+                return 4;
+            }
+
+            // Render the contribution graph
+            async function renderGraph(year) {
+                contributionGraph.innerHTML = '';
+                contributionCount.textContent = 'Loading contributions...';
+
+                const data = await fetchGitHubContributions(GITHUB_USERNAME, year);
+
+                if (!data || !data.contributions) {
+                    // Fallback to showing empty graph with message
+                    contributionCount.textContent = 'Unable to load contributions';
+                    renderEmptyGraph(year);
+                    return;
+                }
+
+                let totalContributions = data.total[year] || 0;
+                const contributions = data.contributions;
+
+                // Sort contributions by date
+                contributions.sort((a, b) => new Date(a.date) - new Date(b.date));
+
+                // Create cells for each day
+                contributions.forEach(day => {
+                    const cell = document.createElement('div');
+                    const level = getContributionLevel(day.count);
+                    cell.className = `contribution-cell level-${level}`;
+                    cell.title = `${day.count} contribution${day.count !== 1 ? 's' : ''} on ${new Date(day.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}`;
+                    contributionGraph.appendChild(cell);
+                });
+
+                contributionCount.textContent = `${totalContributions} contributions in ${year}`;
+            }
+
+            // Render empty graph as fallback
+            function renderEmptyGraph(year) {
+                const startDate = new Date(year, 0, 1);
+                const endDate = new Date(year, 11, 31);
+                let currentDate = new Date(startDate);
+
+                // Adjust to start from Sunday
+                const dayOfWeek = currentDate.getDay();
+                currentDate.setDate(currentDate.getDate() - dayOfWeek);
+
+                while (currentDate <= endDate) {
+                    const cell = document.createElement('div');
+                    cell.className = 'contribution-cell level-0';
+                    cell.title = `No data available`;
+                    contributionGraph.appendChild(cell);
+                    currentDate.setDate(currentDate.getDate() + 1);
+                }
+            }
+
+            // Initial render
+            renderGraph(2026);
+
+            // Year button click handlers
+            yearButtons.forEach(btn => {
+                btn.addEventListener('click', function () {
+                    yearButtons.forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                    const year = parseInt(this.dataset.year);
+                    renderGraph(year);
+                });
+            });
+        });
+    </script>
+
+    <!-- Hero Background Animation -->
+    <script src="hero-background.js"></script>
+</body>
+
+</html>
