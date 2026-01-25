@@ -113,14 +113,16 @@
                         </div>
                     </div>
                     <div class="about-new-images">
-                        <div class="about-image-stack">
-                            <div class="about-image-card about-image-1">
-                                <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=500&fit=crop"
-                                    alt="Mountain landscape" />
+                        <div class="cards-container">
+                            <div class="tinder-card">
+                                <img src="/assets/avneesh.png" alt="Profile Picture" draggable="false" />
                             </div>
-                            <div class="about-image-card about-image-2">
+                            <div class="tinder-card">
                                 <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=400&h=500&fit=crop"
-                                    alt="Mountain adventure" />
+                                    alt="Mountain Adventure" draggable="false" />
+                            </div>
+                            <div class="tinder-card">
+                                <img src="/assets/card-image-3.png" alt="Gallery Image" draggable="false" />
                             </div>
                         </div>
                     </div>
@@ -820,6 +822,140 @@
 
     <!-- Hero Background Animation -->
     <script src="hero-background.js"></script>
+    <!-- Swipable Cards Logic -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const container = document.querySelector('.cards-container');
+            if (!container) return;
+
+            let cards = Array.from(document.querySelectorAll('.tinder-card'));
+            let activeIndex = 1; // Start middle for 3 cards (0, 1, 2)
+
+            let isDragging = false;
+            let startX = 0;
+            let currentTranslateX = 0;
+            let autoPlayInterval;
+
+            function updateCards(progress = 0) {
+                const count = cards.length;
+                const mid = Math.floor(count / 2);
+
+                cards.forEach((card, index) => {
+                    // Raw difference
+                    let rawOffset = index - activeIndex;
+
+                    // Wrap offset to be within [-mid, mid]
+                    while (rawOffset > mid) rawOffset -= count;
+                    while (rawOffset < -mid) rawOffset += count;
+
+                    let visualOffset = rawOffset;
+
+                    // Drag influence
+                    const finalOffset = visualOffset + progress;
+
+                    // Style config for 3D Arc
+                    const xTranslate = finalOffset * 50;
+                    const zTranslate = Math.abs(finalOffset) * -150;
+                    const rotateY = finalOffset * -25;
+                    const opacity = 1 - (Math.abs(finalOffset) * 0.3);
+
+                    const zIndex = Math.round(100 - Math.abs(finalOffset) * 10);
+
+                    const transform = `translateX(${xTranslate}%) translateZ(${zTranslate}px) rotateY(${rotateY}deg)`;
+
+                    card.style.transform = transform;
+                    card.style.opacity = Math.max(0, opacity);
+                    card.style.zIndex = zIndex;
+
+                    if (Math.abs(finalOffset) < 0.5) {
+                        card.style.pointerEvents = 'auto';
+                        card.style.cursor = isDragging ? 'grabbing' : 'grab';
+                    } else {
+                        card.style.pointerEvents = 'none';
+                    }
+                });
+            }
+
+            function handleStart(e) {
+                if (e.target.closest('.tinder-card') && e.button !== 0 && e.type === 'mousedown') return;
+
+                stopAutoPlay(); // Stop on interaction
+
+                isDragging = true;
+                startX = e.type === 'mousedown' ? e.clientX : e.touches[0].clientX;
+                container.style.cursor = 'grabbing';
+
+                cards.forEach(card => card.style.transition = 'none');
+            }
+
+            function handleMove(e) {
+                if (!isDragging) return;
+
+                const clientX = e.type === 'mousemove' ? e.clientX : e.touches[0].clientX;
+                const deltaX = clientX - startX;
+                const width = container.offsetWidth;
+                const progress = deltaX / width * 1.5;
+
+                updateCards(progress);
+                currentTranslateX = progress;
+            }
+
+            function handleEnd(e) {
+                if (!isDragging) return;
+                isDragging = false;
+                container.style.cursor = 'default';
+
+                cards.forEach(card => card.style.transition = 'transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1), opacity 0.5s ease');
+
+                if (currentTranslateX > 0.3) {
+                    activeIndex--;
+                } else if (currentTranslateX < -0.3) {
+                    activeIndex++;
+                }
+
+                updateCards(0);
+                currentTranslateX = 0;
+
+                startAutoPlay(); // Resume after interaction
+            }
+
+            function startAutoPlay() {
+                stopAutoPlay(); // Clear existing to be safe
+                autoPlayInterval = setInterval(() => {
+                    // Animate to next card
+                    activeIndex++;
+                    updateCards(0);
+                }, 1500); // 3 seconds
+            }
+
+            function stopAutoPlay() {
+                clearInterval(autoPlayInterval);
+            }
+
+            // Events
+            container.addEventListener('mousedown', handleStart);
+            container.addEventListener('touchstart', handleStart);
+
+            window.addEventListener('mousemove', handleMove);
+            window.addEventListener('touchmove', handleMove);
+
+            window.addEventListener('mouseup', handleEnd);
+            window.addEventListener('touchend', handleEnd);
+
+            // AutoPlay controls
+            container.addEventListener('mouseenter', stopAutoPlay);
+            container.addEventListener('mouseleave', () => {
+                if (!isDragging) startAutoPlay();
+            });
+
+            // Initial call
+            updateCards();
+            startAutoPlay(); // Start automatically
+
+            cards.forEach(c => c.querySelector('img').addEventListener('dragstart', e => e.preventDefault()));
+        });
+
+    </script>
 </body>
 
 </html>
