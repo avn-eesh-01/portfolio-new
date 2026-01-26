@@ -946,6 +946,10 @@ h1 .highlight::after {
   transition: var(--transition);
 }
 
+.upsight-img{
+  margin-top: 2rem;
+}
+
 .project-overlay {
   position: absolute;
   top: 0;
