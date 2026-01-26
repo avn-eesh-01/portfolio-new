@@ -1284,36 +1284,6 @@ h1 .highlight::after {
   color: var(--text);
 }
 
-/* LinkedIn Card Specific Styles */
-.contact-card.linkedin-card:hover::before {
-  background: linear-gradient(135deg, #0077b5, #004e7c); /* LinkedIn Blue Gradient */
-}
-
-.contact-card.linkedin-card:hover .contact-icon {
-  background: #0077b5;
-  border-color: #0077b5;
-}
-
-.contact-card.linkedin-card:hover .contact-link {
-  background: #0077b5;
-  border-color: #0077b5;
-}
-
-/* GitHub Card Specific Styles */
-.contact-card.github-card:hover::before {
-  background: linear-gradient(135deg, #333333, #181717); /* GitHub Black Gradient */
-}
-
-.contact-card.github-card:hover .contact-icon {
-  background: #181717;
-  border-color: #333;
-}
-
-.contact-card.github-card:hover .contact-link {
-  background: #181717;
-  border-color: #333;
-}
-
 .contact-form-container {
   flex: 1 1 500px;
   background: var(--bg-card);
