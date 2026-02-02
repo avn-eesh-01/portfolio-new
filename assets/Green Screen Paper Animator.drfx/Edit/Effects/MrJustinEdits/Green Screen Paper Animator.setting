@@ -1,0 +1,795 @@
+{
+	Tools = ordered() {
+		MacroTool1 = GroupOperator {
+			Inputs = ordered() {
+				Input1 = InstanceInput {
+					SourceOp = "footage",
+					Source = "ClipName",
+					Name = "Drag Clip Here",
+					DefaultText = "",
+				},
+				Input2 = InstanceInput {
+					SourceOp = "resize",
+					Source = "Center",
+				},
+				Input3 = InstanceInput {
+					SourceOp = "resize",
+					Source = "Size",
+					Default = 1,
+				},
+				Input4 = InstanceInput {
+					SourceOp = "resize",
+					Source = "Angle",
+					Default = 0,
+				},
+				Input5 = InstanceInput {
+					SourceOp = "resize",
+					Source = "FlipHoriz",
+					ControlGroup = 5,
+					Default = 0,
+				},
+				Input6 = InstanceInput {
+					SourceOp = "resize",
+					Source = "FlipVert",
+					ControlGroup = 5,
+					Default = 0,
+				},
+				Input7 = InstanceInput {
+					SourceOp = "paperedge_controls",
+					Source = "Input2",
+					Name = "Edge Thickness",
+					Default = 0.01,
+				},
+				Input8 = InstanceInput {
+					SourceOp = "paperedge_controls",
+					Source = "Input7",
+					Default = 1.75,
+				},
+				Input9 = InstanceInput {
+					SourceOp = "paperedge_controls",
+					Source = "Input8",
+					Default = 10,
+				},
+				Input10 = InstanceInput {
+					SourceOp = "paperedge_controls",
+					Source = "Input11",
+					Default = 0.1,
+				},
+				Input11 = InstanceInput {
+					SourceOp = "paperedge_controls",
+					Source = "Input12",
+				},
+				Input12 = InstanceInput {
+					SourceOp = "paperedge_controls",
+					Source = "Input13",
+					Name = "Shadow Softness",
+					Default = 0.015,
+				},
+				Input13 = InstanceInput {
+					SourceOp = "paperedge_controls",
+					Source = "Input17",
+					Name = "Shadow Blend",
+					ControlGroup = 12,
+					Default = 1,
+				},
+				Input14 = InstanceInput {
+					SourceOp = "paperoverlay_blend",
+					Source = "BlendClone",
+					Name = "Faded Paper",
+					Default = 0.25,
+				},
+				Input15 = InstanceInput {
+					SourceOp = "Shake2",
+					Source = "XMinimum",
+					Name = "Wiggle Minimum",
+					Default = -5,
+				},
+				Input16 = InstanceInput {
+					SourceOp = "Shake2",
+					Source = "XMaximum",
+					Name = "Wiggle Maximum",
+					Default = 5,
+				},
+				Input17 = InstanceInput {
+					SourceOp = "StopMotion1",
+					Source = "frameRepeat",
+					Name = "Stop Motion Effect",
+					Default = 10,
+				},
+			},
+			Outputs = {
+				MainOutput1 = InstanceOutput {
+					SourceOp = "StopMotion3",
+					Source = "Output",
+				}
+			},
+			ViewInfo = GroupInfo { Pos = { 0, 0 } },
+			Tools = ordered() {
+				Loader1 = Loader {
+					Clips = {
+						Clip {
+							ID = "Clip1",
+							Filename = "Setting:\\crumple_paper.png",
+							FormatID = "PNGFormat",
+							StartFrame = -1,
+							LengthSetManually = true,
+							TrimIn = 0,
+							TrimOut = 0,
+							ExtendFirst = 0,
+							ExtendLast = 0,
+							Loop = 0,
+							AspectMode = 0,
+							Depth = 0,
+							TimeCode = 0,
+							GlobalStart = 0,
+							GlobalEnd = 0
+						}
+					},
+					Inputs = {
+						MissingFrames = Input { Value = 1, },
+						["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+						["Clip1.PNGFormat.PostMultiply"] = Input { Value = 1, },
+					},
+					ViewInfo = OperatorInfo { Pos = { 244.274, 9.02989 } },
+				},
+				Loader1_1 = Loader {
+					Clips = {
+						Clip {
+							ID = "Clip1",
+							Filename = "Setting:\\crumple_paper.png",
+							FormatID = "PNGFormat",
+							StartFrame = -1,
+							LengthSetManually = true,
+							TrimIn = 0,
+							TrimOut = 0,
+							ExtendFirst = 0,
+							ExtendLast = 0,
+							Loop = 0,
+							AspectMode = 0,
+							Depth = 0,
+							TimeCode = 0,
+							GlobalStart = 0,
+							GlobalEnd = 0
+						}
+					},
+					Inputs = {
+						MissingFrames = Input { Value = 1, },
+						["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+						["Clip1.PNGFormat.PostMultiply"] = Input { Value = 1, },
+					},
+					ViewInfo = OperatorInfo { Pos = { 380.031, 70.3328 } },
+				},
+				Rectangle1 = RectangleMask {
+					Inputs = {
+						Filter = Input { Value = FuID { "Fast Gaussian" }, },
+						MaskWidth = Input { Value = 1920, },
+						MaskHeight = Input { Value = 1080, },
+						PixelAspect = Input { Value = { 1, 1 }, },
+						UseFrameFormatSettings = Input { Value = 1, },
+						ClippingMode = Input { Value = FuID { "None" }, },
+						Width = Input { Value = 0.989, },
+						Height = Input { Value = 0.98, },
+					},
+					ViewInfo = OperatorInfo { Pos = { -381.308, 78.2713 } },
+				},
+				footage = MediaIn {
+					CtrlWZoom = false,
+					CustomData = { MEDIA_ID = "18e2587d-9485-42d2-8562-56eb6a2d8ffb", MediaProps = {
+							MEDIA_NUM_LAYERS = 0,
+							MEDIA_FORMAT_TYPE = "PNG",
+							MEDIA_PATH = "K:\\MrjustinEditsPixelArt\\placeholder.png",
+							MEDIA_LAYER_DESC = {
+							},
+							MEDIA_NAME = "placeholder.png",
+							MEDIA_HEIGHT = 1080,
+							MEDIA_START_FRAME = 0,
+							MEDIA_IS_SOURCE_RES = true,
+							MEDIA_SRC_FRAME_RATE = 30,
+							MEDIA_MARK_OUT = 0,
+							MEDIA_WIDTH = 1920,
+							MEDIA_NUM_FRAMES = 1,
+							MEDIA_MARK_IN = 0,
+							MEDIA_PAR = 1
+						}, },
+					Inputs = {
+						EffectMask = Input {
+							SourceOp = "Rectangle1",
+							Source = "Mask",
+						},
+						MediaSource = Input { Value = FuID { "MediaPool" }, },
+						MediaID = Input { Value = "18e2587d-9485-42d2-8562-56eb6a2d8ffb", },
+						AudioTrack = Input { Value = FuID { "No_Audo_Track" }, },
+						Layer = Input {
+							Value = Text {
+							},
+						},
+						ClipTimeEnd = Input { Value = 0, },
+						Loop = Input { Value = 1, },
+						["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+						LeftAudio = Input {
+							SourceOp = "Left",
+							Source = "Data",
+						},
+						RightAudio = Input {
+							SourceOp = "Right",
+							Source = "Data",
+						},
+					},
+					ViewInfo = OperatorInfo { Pos = { -264.528, 80.2583 } },
+				},
+				Left = AudioDisplay {
+					CtrlWZoom = false,
+				},
+				Right = AudioDisplay {
+					CtrlWZoom = false,
+				},
+				resize = Merge {
+					NameSet = true,
+					Inputs = {
+						Background = Input {
+							SourceOp = "bg_extend",
+							Source = "Output",
+						},
+						Foreground = Input {
+							SourceOp = "footage",
+							Source = "Output",
+						},
+						Center = Input {
+							SourceOp = "Publish1",
+							Source = "Value",
+						},
+						PerformDepthMerge = Input { Value = 0, },
+					},
+					ViewInfo = OperatorInfo { Pos = { -104.637, 93.9712 } },
+				},
+				Publish1 = PublishPoint {
+					CtrlWZoom = false,
+				},
+				bg_extend = Background {
+					NameSet = true,
+					Inputs = {
+						Width = Input { Value = 1920, },
+						Height = Input { Value = 1080, },
+						UseFrameFormatSettings = Input { Value = 1, },
+						["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+						TopLeftGreen = Input { Value = 1, },
+						TopLeftBlue = Input { Value = 0.0039215686275, },
+					},
+					ViewInfo = OperatorInfo { Pos = { -287.819, 144.36 } },
+					Colors = { TileColor = { R = 0.623529411764706, G = 0.776470588235294, B = 0.0823529411764706 }, }
+				},
+				keyer_controls = DeltaKeyer {
+					NameSet = true,
+					Inputs = {
+						BackgroundRed = Input { Value = 0.0039215686275, },
+						BackgroundGreen = Input { Value = 1, },
+						BackgroundBlue = Input { Value = 0, },
+						Gain = Input { Value = 2, },
+						AlphaReferenceGreen = Input { Value = 1, },
+						TuningRanges = Input {
+							Value = ColorCurves {
+								Curves = {
+									{
+										Points = {
+											{ 0, 1 },
+											{ 0.4, 0.2 },
+											{ 0.6, 0 },
+											{ 1, 0 }
+										}
+									},
+									{
+										Points = {
+											{ 0, 0 },
+											{ 0.4, 0 },
+											{ 0.6, 0.2 },
+											{ 1, 1 }
+										}
+									}
+								}
+							},
+						},
+						Input = Input {
+							SourceOp = "resize",
+							Source = "Output",
+						},
+					},
+					ViewInfo = OperatorInfo { Pos = { -255.178, 229.524 } },
+				},
+				paperedge_controls = MacroOperator {
+					NameSet = true,
+					CustomData = { Path = { Map = { ["Setting:"] = "Templates:\\Templates.drfx\\Edit\\Effects\\" } } },
+					Inputs = ordered() {
+						Border = InstanceInput {
+							SourceOp = "Background1_1",
+							Source = "Border",
+							Page = "Controls",
+						},
+						Input1 = InstanceInput {
+							SourceOp = "ErodeDilate1",
+							Source = "Filter",
+							Name = "Border Filter",
+							Default = 0,
+						},
+						Input2 = InstanceInput {
+							SourceOp = "ErodeDilate1",
+							Source = "XAmount",
+							Name = "Border",
+							Default = 0.0022,
+						},
+						Input3 = InstanceInput {
+							SourceOp = "Background1_1",
+							Source = "TopLeftRed",
+							Name = "Border Color",
+							ControlGroup = 3,
+							Default = 0.994,
+						},
+						Input4 = InstanceInput {
+							SourceOp = "Background1_1",
+							Source = "TopLeftGreen",
+							ControlGroup = 3,
+							Default = 0.9984,
+						},
+						Input5 = InstanceInput {
+							SourceOp = "Background1_1",
+							Source = "TopLeftBlue",
+							ControlGroup = 3,
+							Default = 1,
+						},
+						Input6 = InstanceInput {
+							SourceOp = "Background1_1",
+							Source = "TopLeftAlpha",
+							ControlGroup = 3,
+							Default = 1,
+						},
+						Edge = InstanceInput {
+							SourceOp = "FastNoise1",
+							Source = "Edge",
+							Page = "Controls",
+						},
+						Input7 = InstanceInput {
+							SourceOp = "FastNoise1",
+							Source = "Contrast",
+							Name = "Edge Contrast",
+							Default = 1.13,
+						},
+						Input8 = InstanceInput {
+							SourceOp = "FastNoise1",
+							Source = "XScale",
+							Name = "Edge Roughness",
+							Default = 20,
+						},
+						Input9 = InstanceInput {
+							SourceOp = "FastNoise1",
+							Source = "Seethe",
+							Name = "Edge Randomise",
+							Default = 0,
+						},
+						Input10 = InstanceInput {
+							SourceOp = "Displace1",
+							Source = "Center",
+							Name = "Edge Position",
+						},
+						Input11 = InstanceInput {
+							SourceOp = "Displace1",
+							Source = "RefractionStrength",
+							Name = "Edge Intensity",
+							MinScale = 0,
+							Default = 0.1,
+						},
+						Shadow = InstanceInput {
+							SourceOp = "Displace1",
+							Source = "Shadow",
+							Page = "Controls",
+						},
+						Input12 = InstanceInput {
+							SourceOp = "Shadow1",
+							Source = "ShadowOffset",
+						},
+						Input13 = InstanceInput {
+							SourceOp = "Shadow1",
+							Source = "Softness",
+							Default = 0.015,
+						},
+						Input14 = InstanceInput {
+							SourceOp = "Shadow1",
+							Source = "Red",
+							Name = "Shadow Color",
+							ControlGroup = 11,
+							Default = 0,
+						},
+						Input15 = InstanceInput {
+							SourceOp = "Shadow1",
+							Source = "Green",
+							Name = "Shadow Color",
+							ControlGroup = 11,
+							Default = 0,
+						},
+						Input16 = InstanceInput {
+							SourceOp = "Shadow1",
+							Source = "Blue",
+							Name = "Shadow Color",
+							ControlGroup = 11,
+							Default = 0,
+						},
+						Input17 = InstanceInput {
+							SourceOp = "Shadow1",
+							Source = "Alpha",
+							Name = "Shadow Color",
+							ControlGroup = 11,
+							Default = 1,
+						},
+						MainInput1 = InstanceInput {
+							SourceOp = "PipeRouter1",
+							Source = "Input",
+						}
+					},
+					Outputs = {
+						MainOutput1 = InstanceOutput {
+							SourceOp = "Merge2",
+							Source = "Output",
+						}
+					},
+					ViewInfo = GroupInfo { Pos = { -107.307, 231.274 } },
+					Tools = ordered() {
+						ErodeDilate1 = ErodeDilate {
+							CtrlWShown = false,
+							Inputs = {
+								XAmount = Input { Value = 0.01, },
+								Input = Input {
+									SourceOp = "PipeRouter1",
+									Source = "Output",
+								},
+							},
+							ViewInfo = OperatorInfo { Pos = { -129, 35.8789 } },
+						},
+						Background1_1 = Background {
+							CtrlWShown = false,
+							Inputs = {
+								Width = Input { Value = 1920, },
+								Height = Input { Value = 1080, },
+								UseFrameFormatSettings = Input { Value = 1, },
+								["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+								TopLeftRed = Input { Value = 0.994, },
+								TopLeftGreen = Input { Value = 0.9984, },
+								TopLeftBlue = Input { Value = 1, },
+								Border = Input { Value = 1, },
+							},
+							ViewInfo = OperatorInfo { Pos = { -259, 100.121 } },
+							UserControls = ordered() { Border = { INP_Integer = false, LBLC_DropDownButton = true, LINKID_DataType = "Number", LBLC_NumInputs = 6, INP_External = false, INPID_InputControl = "LabelControl", LINKS_Name = "Border", } }
+						},
+						FastNoise1 = FastNoise {
+							CtrlWShown = false,
+							Inputs = {
+								Width = Input { Value = 1920, },
+								Height = Input { Value = 1080, },
+								UseFrameFormatSettings = Input { Value = 1, },
+								["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+								Center = Input { Value = { 0.463917525773196, 0.637851464029475 }, },
+								Detail = Input { Value = 10, },
+								Contrast = Input { Value = 1.75, },
+								XScale = Input { Value = 10, },
+								Discontinuous = Input { Value = 1, },
+								Inverted = Input { Value = 1, },
+								Edge = Input { Value = 1, },
+							},
+							ViewInfo = OperatorInfo { Pos = { -8.33301, 55.8789 } },
+							UserControls = ordered() { Edge = { INP_Integer = false, LBLC_DropDownButton = true, LINKID_DataType = "Number", LBLC_NumInputs = 5, INP_External = false, INPID_InputControl = "LabelControl", LINKS_Name = "Edge", } }
+						},
+						Displace1 = Displace {
+							CtrlWShown = false,
+							Inputs = {
+								Center = Input {
+									SourceOp = "Publish1",
+									Source = "Value",
+								},
+								Offset = Input { Value = -0.5, },
+								Input = Input {
+									SourceOp = "Merge1_1",
+									Source = "Output",
+								},
+								Foreground = Input {
+									SourceOp = "FastNoise1",
+									Source = "Output",
+								},
+								Shadow = Input { Value = 1, },
+							},
+							ViewInfo = OperatorInfo { Pos = { -8.33301, 100.121 } },
+							UserControls = ordered() { Shadow = { INP_Integer = false, LBLC_DropDownButton = true, LINKID_DataType = "Number", LBLC_NumInputs = 7, INP_External = false, INPID_InputControl = "LabelControl", LINKS_Name = "Shadow", } }
+						},
+						Shadow1 = Shadow {
+							CtrlWShown = false,
+							Inputs = {
+								ShadowOffset = Input { Value = { 0.503, 0.487741 }, },
+								Softness = Input { Value = 0.015, },
+								Input = Input {
+									SourceOp = "Displace1",
+									Source = "Output",
+								},
+							},
+							ViewInfo = OperatorInfo { Pos = { 101.667, 100.121 } },
+						},
+						Merge2 = Merge {
+							CtrlWZoom = false,
+							CtrlWShown = false,
+							Inputs = {
+								Background = Input {
+									SourceOp = "Shadow1",
+									Source = "Output",
+								},
+								Foreground = Input {
+									SourceOp = "PipeRouter2",
+									Source = "Output",
+								},
+								PerformDepthMerge = Input { Value = 0, },
+							},
+							ViewInfo = OperatorInfo { Pos = { 259, 100.121 } },
+						},
+						Merge1_1 = Merge {
+							CtrlWShown = false,
+							Inputs = {
+								Background = Input {
+									SourceOp = "Background1_1",
+									Source = "Output",
+								},
+								Foreground = Input {
+									SourceOp = "ErodeDilate1",
+									Source = "Output",
+								},
+								Center = Input { Value = { 0.499125, 0.498148148148148 }, },
+								Operator = Input { Value = FuID { "Mask" }, },
+								PerformDepthMerge = Input { Value = 0, },
+							},
+							ViewInfo = OperatorInfo { Pos = { -129, 100.121 } },
+						},
+						PipeRouter1 = PipeRouter {
+							CtrlWShown = false,
+							Inputs = {
+								Input = Input {
+									SourceOp = "keyer_controls",
+									Source = "Output",
+								},
+							},
+							ViewInfo = PipeRouterInfo { Pos = { -129, 7.39415 } },
+						},
+						PipeRouter2 = PipeRouter {
+							CtrlWShown = false,
+							Inputs = {
+								Input = Input {
+									SourceOp = "PipeRouter1",
+									Source = "Output",
+								},
+							},
+							ViewInfo = PipeRouterInfo { Pos = { 259, 7.39415 } },
+						}
+					},
+				},
+				Bitmap1 = BitmapMask {
+					Inputs = {
+						Filter = Input { Value = FuID { "Fast Gaussian" }, },
+						MaskWidth = Input { Value = 1920, },
+						MaskHeight = Input { Value = 1080, },
+						PixelAspect = Input { Value = { 1, 1 }, },
+						UseFrameFormatSettings = Input { Value = 1, },
+						ClippingMode = Input { Value = FuID { "None" }, },
+						Image = Input {
+							SourceOp = "StopMotion1",
+							Source = "Output",
+						},
+					},
+					ViewInfo = OperatorInfo { Pos = { 114.029, 8.24099 } },
+				},
+				paperoverlay = Merge {
+					NameSet = true,
+					Inputs = {
+						EffectMask = Input {
+							SourceOp = "Bitmap1",
+							Source = "Mask",
+						},
+						Background = Input {
+							SourceOp = "StopMotion1",
+							Source = "Output",
+						},
+						Foreground = Input {
+							SourceOp = "StopMotion",
+							Source = "Output",
+						},
+						Center = Input {
+							SourceOp = "Shake1",
+							Source = "Position",
+						},
+						Size = Input { Value = 1.25, },
+						ApplyMode = Input { Value = FuID { "Soft Light" }, },
+						Edges = Input { Value = 3, },
+						PerformDepthMerge = Input { Value = 0, },
+					},
+					ViewInfo = OperatorInfo { Pos = { 107.364, 56.1196 } },
+				},
+				Shake1 = Shake {
+					Faster = true,
+					CtrlWZoom = false,
+					CustomData = { Path = { Map = { ["Setting:"] = "EditTemplates:\\Effects\\" } } },
+					Inputs = {
+						Smoothness = Input { Value = 0.001, },
+					},
+				},
+				StopMotion = ofx.com.blackmagicdesign.resolvefx.StopMotion {
+					NameSet = true,
+					Inputs = {
+						Source = Input {
+							SourceOp = "Loader1",
+							Source = "Output",
+						},
+						advancedGroup = Input { Value = 0, },
+						setReferenceButton = Input { Value = 0, },
+						referenceFrame = Input {
+							Value = 0,
+							Disabled = true,
+						},
+						frameRepeatVar = Input { Value = 0, },
+						frameRepeat = Input { Value = 5, },
+						blendGroup = Input { Value = 0, },
+						blendIn = Input { Value = 1, },
+						blend = Input { Value = 0, },
+						ignoreContentShape = Input { Value = 0, },
+						legacyIsProcessRGBOnly = Input { Value = 0, },
+						IsNoTemporalFramesReqd = Input { Value = 0, },
+						refreshTrigger = Input { Value = 1, },
+						resolvefxVersion = Input { Value = "1.0", },
+					},
+					ViewInfo = OperatorInfo { Pos = { 242.024, 57.3324 } },
+				},
+				paperoverlay_blend = Merge {
+					NameSet = true,
+					Inputs = {
+						Blend = Input { Value = 0.25, },
+						Background = Input {
+							SourceOp = "paperoverlay",
+							Source = "Output",
+						},
+						Foreground = Input {
+							SourceOp = "StopMotion_1",
+							Source = "Output",
+						},
+						Center = Input {
+							SourceOp = "Shake3",
+							Source = "Position",
+						},
+						Size = Input { Value = 1.25, },
+						ApplyMode = Input { Value = FuID { "Screen" }, },
+						Operator = Input { Value = FuID { "In" }, },
+						Edges = Input { Value = 3, },
+						PerformDepthMerge = Input { Value = 0, },
+					},
+					ViewInfo = OperatorInfo { Pos = { 117.362, 139.423 } },
+				},
+				Shake3 = Shake {
+					Faster = true,
+					CtrlWZoom = false,
+					Inputs = {
+						Smoothness = Input { Value = 0.001, },
+					},
+				},
+				StopMotion_1 = ofx.com.blackmagicdesign.resolvefx.StopMotion {
+					NameSet = true,
+					Inputs = {
+						Source = Input {
+							SourceOp = "Loader1_1",
+							Source = "Output",
+						},
+						advancedGroup = Input { Value = 0, },
+						setReferenceButton = Input { Value = 0, },
+						referenceFrame = Input {
+							Value = 0,
+							Disabled = true,
+						},
+						frameRepeatVar = Input { Value = 0, },
+						frameRepeat = Input { Value = 5, },
+						blendGroup = Input { Value = 0, },
+						blendIn = Input { Value = 1, },
+						blend = Input { Value = 0, },
+						ignoreContentShape = Input { Value = 0, },
+						legacyIsProcessRGBOnly = Input { Value = 0, },
+						IsNoTemporalFramesReqd = Input { Value = 0, },
+						refreshTrigger = Input { Value = 1, },
+						resolvefxVersion = Input { Value = "1.0", },
+					},
+					ViewInfo = OperatorInfo { Pos = { 377.778, 136.818 } },
+				},
+				Wiggle = Transform {
+					NameSet = true,
+					Inputs = {
+						Center = Input {
+							SourceOp = "Perturb1",
+							Source = "Value",
+						},
+						Pivot = Input {
+							SourceOp = "Publish1",
+							Source = "Value",
+						},
+						Angle = Input {
+							SourceOp = "Shake2",
+							Source = "X",
+						},
+						Input = Input {
+							SourceOp = "paperoverlay_blend",
+							Source = "Output",
+						},
+					},
+					ViewInfo = OperatorInfo { Pos = { 116.694, 226.695 } },
+				},
+				Perturb1 = PerturbPoint {
+					CtrlWZoom = false,
+					CustomData = { Path = { Map = { ["Setting:"] = "EditTemplates:\\Effects\\" } } },
+					Inputs = {
+						XScale = Input { Value = 0.2, },
+						YScale = Input { Value = 0.2, },
+						Strength = Input { Value = 0.1, },
+						Wobble = Input { Value = 0.5, },
+						Speed = Input { Value = 1.5, },
+					},
+				},
+				Shake2 = Shake {
+					Faster = true,
+					CtrlWZoom = false,
+					CustomData = { Path = { Map = { ["Setting:"] = "EditTemplates:\\Effects\\" } } },
+					Inputs = {
+						Smoothness = Input { Value = 0.001, },
+						XMinimum = Input { Value = -5, },
+						XMaximum = Input { Value = 5, },
+					},
+				},
+				StopMotion3 = ofx.com.blackmagicdesign.resolvefx.StopMotion {
+					Inputs = {
+						Source = Input {
+							SourceOp = "Wiggle",
+							Source = "Output",
+						},
+						advancedGroup = Input { Value = 0, },
+						setReferenceButton = Input { Value = 0, },
+						referenceFrame = Input {
+							Value = 0,
+							Disabled = true,
+						},
+						frameRepeatVar = Input { Value = 0, },
+						frameRepeat = Input { Value = 5, },
+						blendGroup = Input { Value = 0, },
+						blendIn = Input { Value = 1, },
+						blend = Input { Value = 0, },
+						ignoreContentShape = Input { Value = 0, },
+						legacyIsProcessRGBOnly = Input { Value = 0, },
+						IsNoTemporalFramesReqd = Input { Value = 0, },
+						refreshTrigger = Input { Value = 1, },
+						resolvefxVersion = Input { Value = "1.0", },
+					},
+					ViewInfo = OperatorInfo { Pos = { 318.683, 204.273 } },
+				},
+				StopMotion1 = ofx.com.blackmagicdesign.resolvefx.StopMotion {
+					Inputs = {
+						Source = Input {
+							SourceOp = "Merge2",
+							Source = "Output",
+						},
+						advancedGroup = Input { Value = 0, },
+						setReferenceButton = Input { Value = 0, },
+						referenceFrame = Input {
+							Value = 0,
+							Disabled = true,
+						},
+						frameRepeatVar = Input { Value = 0, },
+						frameRepeat = Input { Value = 10, },
+						blendGroup = Input { Value = 0, },
+						blendIn = Input { Value = 1, },
+						blend = Input { Value = 0, },
+						ignoreContentShape = Input { Value = 0, },
+						legacyIsProcessRGBOnly = Input { Value = 0, },
+						IsNoTemporalFramesReqd = Input { Value = 0, },
+						refreshTrigger = Input { Value = 1, },
+						resolvefxVersion = Input { Value = "1.0", },
+					},
+					ViewInfo = OperatorInfo { Pos = { -7.97223, 176.999 } },
+				}
+			},
+		}
+	},
+	ActiveTool = "MacroTool1"
+}
