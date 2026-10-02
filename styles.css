@@ -741,7 +741,7 @@ h1 .highlight::after {
   box-shadow: 0 8px 20px rgba(255, 58, 58, 0.3);
 }
 
-/* 3D Carousel Cards Styles */
+/* Code × Brand card stack */
 .about-new-images {
   flex: 1;
   display: flex;
@@ -774,28 +774,122 @@ h1 .highlight::after {
   transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1), opacity 0.5s ease;
   will-change: transform;
   border: 1px solid rgba(255, 255, 255, 0.1);
-  /* Ensure image covers fully */
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 2rem;
+  isolation: isolate;
 }
 
 .tinder-card:active {
   cursor: grabbing;
 }
 
-.tinder-card img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.code-brand-card::before,
+.code-brand-card::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  border-radius: 50%;
   pointer-events: none;
-  display: block;
-  user-select: none;
 }
 
-.about-image-stack:hover .about-image-2 {
-  transform: rotate(3deg) translateY(-5px);
-  box-shadow: 0 25px 40px rgba(0, 0, 0, 0.5);
+.code-brand-card::before {
+  width: 220px;
+  height: 220px;
+  top: -105px;
+  right: -85px;
+  background: rgba(255, 58, 58, 0.17);
+  filter: blur(2px);
+}
+
+.code-brand-card::after {
+  width: 145px;
+  height: 145px;
+  bottom: -65px;
+  left: -60px;
+  border: 1px solid rgba(255, 255, 255, 0.13);
+}
+
+.developer-card {
+  background: linear-gradient(150deg, #1e222a, #101114 72%);
+}
+
+.bridge-card {
+  background: linear-gradient(145deg, #3b171b, #171214 64%, #111112);
+  border-color: rgba(255, 158, 158, 0.34);
+}
+
+.brand-manager-card {
+  background: linear-gradient(150deg, #1f1b29, #111114 70%);
+}
+
+.code-brand-card__icon {
+  display: grid;
+  place-items: center;
+  width: 64px;
+  height: 64px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 18px;
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.12);
+  font-family: 'Courier New', monospace;
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: -0.08em;
+}
+
+.code-brand-card__icon--mark {
+  color: #fff;
+  gap: 1px;
+  letter-spacing: -0.05em;
+}
+
+.code-brand-card__icon--mark span:last-child {
+  color: var(--primary-light);
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.45rem;
+}
+
+.code-brand-card__icon i {
+  font-size: 1.35rem;
+}
+
+.code-brand-card__content {
+  margin-top: auto;
+}
+
+.code-brand-card__eyebrow {
+  margin-bottom: 0.55rem;
+  color: var(--primary-light);
+  font-size: 0.66rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.code-brand-card h3 {
+  margin: 0 0 0.75rem;
+  color: var(--text);
+  font-family: 'Georgia', 'Times New Roman', serif;
+  font-size: clamp(1.65rem, 2.4vw, 2.1rem);
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.04;
+}
+
+.code-brand-card h3 span {
+  color: var(--primary);
+}
+
+.code-brand-card__content > p:last-child {
+  margin: 0;
+  color: var(--text-light);
+  font-size: 0.84rem;
+  line-height: 1.55;
+  opacity: 0.9;
 }
 
 /* Responsive for new About section */
@@ -815,23 +909,7 @@ h1 .highlight::after {
   
   .about-new-images {
     min-height: 380px;
-  }
-  
-  .about-image-stack {
-    max-width: 380px;
-    height: 350px;
-  }
-  
-  .about-image-1 {
-    width: 180px;
-    height: 230px;
-    left: 15%;
-  }
-  
-  .about-image-2 {
-    width: 200px;
-    height: 260px;
-    right: 10%;
+    margin-left: 0;
   }
 }
 
@@ -845,24 +923,33 @@ h1 .highlight::after {
   }
   
   .about-new-images {
-    min-height: 320px;
+    min-height: 345px;
   }
-  
-  .about-image-stack {
-    max-width: 300px;
-    height: 280px;
+
+  .cards-container {
+    width: min(78vw, 290px);
+    height: 345px;
   }
-  
-  .about-image-1 {
-    width: 140px;
-    height: 180px;
-    left: 10%;
+
+  .tinder-card {
+    padding: 1.5rem;
+    border-radius: 20px;
   }
-  
-  .about-image-2 {
-    width: 160px;
-    height: 210px;
-    right: 5%;
+
+  .code-brand-card__icon {
+    width: 54px;
+    height: 54px;
+    border-radius: 15px;
+    font-size: 1.1rem;
+  }
+
+  .code-brand-card h3 {
+    font-size: 1.6rem;
+  }
+
+  .code-brand-card__content > p:last-child {
+    font-size: 0.76rem;
+    line-height: 1.48;
   }
 }
 
@@ -946,6 +1033,78 @@ h1 .highlight::after {
   transition: var(--transition);
 }
 
+.project-site-preview {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1.5rem;
+  color: var(--text);
+  overflow: hidden;
+  position: relative;
+  transition: var(--transition);
+}
+
+.project-site-preview::before {
+  content: '';
+  position: absolute;
+  width: 230px;
+  height: 230px;
+  border-radius: 50%;
+  top: -125px;
+  right: -55px;
+  background: rgba(255, 255, 255, 0.13);
+}
+
+.project-site-preview::after {
+  content: '';
+  position: absolute;
+  width: 65%;
+  height: 1px;
+  top: 1.35rem;
+  left: 1.5rem;
+  background: rgba(255, 255, 255, 0.35);
+}
+
+.project-site-preview span,
+.project-site-preview small {
+  position: relative;
+  z-index: 1;
+}
+
+.project-site-preview span {
+  font-size: 1.75rem;
+  font-weight: 600;
+  letter-spacing: -0.07em;
+  line-height: 0.96;
+}
+
+.project-site-preview span span,
+.project-site-preview b {
+  color: var(--primary-light);
+  font-weight: inherit;
+}
+
+.project-site-preview small {
+  margin-top: 0.65rem;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.7rem;
+  letter-spacing: 0.04em;
+}
+
+.project-site-preview--kodify {
+  background: linear-gradient(135deg, #281515, #121212 68%);
+}
+
+.project-site-preview--affiliation {
+  background: linear-gradient(135deg, #172329, #101314 72%);
+}
+
+.project-site-preview--elite {
+  background: linear-gradient(135deg, #26203d, #111016 70%);
+}
+
 .upsight-img{
   margin-top: 2rem;
 }
@@ -966,6 +1125,10 @@ h1 .highlight::after {
 
 .project-card:hover .project-image img {
   transform: scale(1.1);
+}
+
+.project-card:hover .project-site-preview {
+  transform: scale(1.06);
 }
 
 .project-card:hover .project-overlay {
@@ -1004,17 +1167,57 @@ h1 .highlight::after {
   padding: 1.5rem;
 }
 
-.project-title {
-  font-size: 1.25rem;
+.project-kicker {
+  margin-bottom: 0.55rem;
+  color: var(--primary-light);
+  font-size: 0.68rem;
   font-weight: 600;
-  margin-bottom: 0.5rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.project-title {
+  font-size: 1.18rem;
+  font-weight: 600;
+  line-height: 1.35;
+  margin-bottom: 1.25rem;
   color: var(--text);
 }
 
-.project-description {
+.case-study {
+  display: grid;
+  gap: 1rem;
+  margin: 0 0 1.35rem;
+}
+
+.case-study__item {
+  padding-left: 0.85rem;
+  border-left: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.case-study__item dt {
+  margin-bottom: 0.22rem;
+  color: var(--primary-light);
+  font-size: 0.66rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.case-study__item dd {
+  margin: 0;
   color: var(--text-light);
-  font-size: 0.95rem;
-  margin-bottom: 1rem;
+  font-size: 0.84rem;
+  line-height: 1.55;
+}
+
+.case-study__item--result {
+  border-left-color: var(--primary);
+}
+
+.case-study__item--result dd {
+  color: var(--text);
+  font-weight: 500;
 }
 
 .project-tech {

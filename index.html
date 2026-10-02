@@ -97,13 +97,9 @@
                     <div class="about-new-text">
                         <span class="about-label">MORE ABOUT ME</span>
                         <h2 class="about-heading">I'm Avneesh, a<br>creative <em>enthusiast</em></h2>
-                        <p class="about-description">A proactive web developer passionate
-                            about creating dynamic web experiences. From frontend to backend, I thrive on solving
-                            complex problems with clean, efficient code. I completed my Bachelors in Computer
-                            Applications in 2025 and specialize in Web Development and Project Management.</p>
-                        <p class="about-description">When I'm not immersed in work, I'm exploring new ideas and write
-                            some scripts or trying filmmaking. Life is about trying new hobbies, and I love embracing
-                            every part of it.</p>
+                        <p class="about-description">I'm a web developer who also works as a Brand Manager at a marketing agency, I build the website based solutions for my passion towards tech and I understand how a product should be positioned in the market through my job.</p>
+                        <p class="about-description">I treat code and brand as the same problem: solve it cleanly, with the end user in mind. Outside of work, I write
+                        scripts and dabble in filmmaking, storytelling finds its way into everything I do.<p>
                         <p class="about-quote">I believe in waking up each day eager to make a difference!</p>
                         <div class="about-social-icons">
                             <a href="https://www.linkedin.com/in/avneesh-kumar-a5905324b/" target="_blank"
@@ -115,16 +111,33 @@
                         </div>
                     </div>
                     <div class="about-new-images">
-                        <div class="cards-container">
-                            <div class="tinder-card">
-                                <img src="/assets/avneesh.png" alt="Profile Picture" draggable="false" />
-                            </div>
-                            <div class="tinder-card">
-                                <img src="/assets/img.jpeg" alt="Mountain Adventure" draggable="false" />
-                            </div>
-                            <div class="tinder-card">
-                                <img src="/assets/img-2.jpeg" alt="Gallery Image" draggable="false" />
-                            </div>
+                        <div class="cards-container" aria-label="Code and brand experience cards">
+                            <article class="tinder-card code-brand-card developer-card">
+                                <div class="code-brand-card__icon" aria-hidden="true">&lt;/&gt;</div>
+                                <div class="code-brand-card__content">
+                                    <p class="code-brand-card__eyebrow">01 / Build</p>
+                                    <h3>The Developer</h3>
+                                    <p>Clean code, scalable systems, built to last.</p>
+                                </div>
+                            </article>
+                            <article class="tinder-card code-brand-card bridge-card">
+                                <div class="code-brand-card__icon code-brand-card__icon--mark" aria-hidden="true">
+                                    <span>AK</span><span>+</span>
+                                </div>
+                                <div class="code-brand-card__content">
+                                    <p class="code-brand-card__eyebrow">02 / Sweet spot</p>
+                                    <h3>Code <span>+</span> Brand</h3>
+                                    <p>Where the build and the message meet.</p>
+                                </div>
+                            </article>
+                            <article class="tinder-card code-brand-card brand-manager-card">
+                                <div class="code-brand-card__icon" aria-hidden="true"><i class="fas fa-bullhorn"></i></div>
+                                <div class="code-brand-card__content">
+                                    <p class="code-brand-card__eyebrow">03 / Strategy</p>
+                                    <h3>The Brand Manager</h3>
+                                    <p>Working brand manager at a marketing agency — positioning, storytelling, and brand voice, backed by real agency experience.</p>
+                                </div>
+                            </article>
                         </div>
                     </div>
                 </div>
@@ -140,29 +153,45 @@
                 <div class="project-filter">
                     <button class="filter-btn active" data-filter="all">All</button>
                     <button class="filter-btn" data-filter="web">Web</button>
-                    <button class="filter-btn" data-filter="mobile">Mobile</button>
-                    <button class="filter-btn" data-filter="other">Other</button>
                 </div>
                 <div class="projects-grid">
                     <div class="project-card" data-category="web">
                         <div class="project-image">
-                            <img src="assets/kodify.webp" alt="PHP Project" />
+                            <div class="project-site-preview project-site-preview--kodify" aria-hidden="true">
+                                <span>kodify<span>.in</span></span>
+                                <small>Digital experiences, built well.</small>
+                            </div>
                             <div class="project-overlay">
                                 <div class="project-links">
-                                    <a href="https://kodify.in" target="_blank" class="project-link">
+                                    <a href="https://kodify.in" target="_blank" rel="noopener noreferrer" class="project-link"
+                                        aria-label="Visit Kodify">
                                         <i class="fas fa-link"></i>
-                                    </a>
-                                    <a href="https://github.com/avn-eesh-01/" target="_blank" class="project-link">
-                                        <i class="fab fa-github"></i>
                                     </a>
                                 </div>
                             </div>
                         </div>
                         <div class="project-info">
-                            <h3 class="project-title">Kodify Website</h3>
-                            <p class="project-description">I developed the website of Kodify, a development agency. I
-                                integrated blog system, contact form, and other similar features to make it interactive
-                                and user-friendly.</p>
+                            <p class="project-kicker">Case study / Digital agency</p>
+                            <h3 class="project-title">Kodify — Digital Agency Website &amp; Lead Generation</h3>
+                            <dl class="case-study">
+                                <div class="case-study__item">
+                                    <dt>Role</dt>
+                                    <dd>Full-Stack Developer</dd>
+                                </div>
+                                <div class="case-study__item">
+                                    <dt>Challenge</dt>
+                                    <dd>Kodify is a Delhi-based agency offering web and app development, e-commerce, SEO, and custom AI solutions. Its broad service list needed a credible site that could build trust and stay easy for the team to run without developer help.</dd>
+                                </div>
+                                <div class="case-study__item">
+                                    <dt>What I Did</dt>
+                                    <dd>Built the site end-to-end, including an interactive UI, blog system, and contact form, giving the team a way to publish content and capture leads independently.</dd>
+                                </div>
+                                <div class="case-study__item case-study__item--result">
+                                    <dt>Result</dt>
+                                    <dd>The Agency started getting multiple new inquiries in a week, the conversions multiplied. </dd>
+                                </div>
+                            </dl>
+
                             <div class="project-tech">
                                 <span>HTML/CSS</span>
                                 <span>JavaScript</span>
@@ -171,57 +200,89 @@
                             </div>
                         </div>
                     </div>
-                    <div class="project-card" data-category="other">
+                    <div class="project-card" data-category="web">
                         <div class="project-image">
-                            <img src="assets/pizza.png" alt="Array Operations" />
+                            <div class="project-site-preview project-site-preview--affiliation" aria-hidden="true">
+                                <span>Affiliation<br>Bureau</span>
+                                <small>Growing meaningful partnerships.</small>
+                            </div>
                             <div class="project-overlay">
                                 <div class="project-links">
-                                    <a href="https://cossy.netlify.app/" target="_blank" class="project-link">
+                                    <a href="https://affiliationbureau.com" target="_blank" rel="noopener noreferrer" class="project-link"
+                                        aria-label="Visit Affiliation Bureau">
                                         <i class="fas fa-link"></i>
-                                    </a>
-                                    <a href="https://github.com/avn-eesh-01/Cossy" target="_blank" class="project-link">
-                                        <i class="fab fa-github"></i>
                                     </a>
                                 </div>
                             </div>
                         </div>
                         <div class="project-info">
-                            <h3 class="project-title">Cossy</h3>
-                            <p class="project-description">It is a Food Restaurant menu website. I built the frontend of
-                                the restaurant, depicting its menu, reviews and contact us page.</p>
+                            <p class="project-kicker">Case study / Institutional consultancy</p>
+                            <h3 class="project-title">Affiliation Bureau: Digital Presence for an Institutional Consultancy</h3>
+                            <dl class="case-study">
+                                <div class="case-study__item">
+                                    <dt>Role</dt>
+                                    <dd>Full-Stack Developer</dd>
+                                </div>
+                                <div class="case-study__item">
+                                    <dt>Challenge</dt>
+                                    <dd>Affiliation Bureau is a new company that helps educational institutions get affiliated with government bodies through proper documentation and support, a credibility-driven service with no digital presence yet.</dd>
+                                </div>
+                                <div class="case-study__item">
+                                    <dt>What I Did</dt>
+                                    <dd>Built the website from scratch to give the business a proper digital representation.</dd>
+                                </div>
+                                <div class="case-study__item case-study__item--result">
+                                    <dt>Result</dt>
+                                    <dd>The Organisation ran advertisements and that landed multiple visitors on the website with potential conversions. </dd>
+                                </div>
+                            </dl>
                             <div class="project-tech">
                                 <span>HTML</span>
                                 <span>Tailwind CSS</span>
-                                <span>JS</span>
+                                <span>JavaScript</span>
                             </div>
                         </div>
                     </div>
                     <div class="project-card" data-category="web">
                         <div class="project-image">
-                            <img class="upsight-img" src="assets/upsight-logo-pixelcrop.webp" alt="BEATsBINDER" />
+                            <div class="project-site-preview project-site-preview--elite" aria-hidden="true">
+                                <span>ELITE<br>NOVA <b>AI</b></span>
+                                <small>Intelligence, elevated.</small>
+                            </div>
                             <div class="project-overlay">
                                 <div class="project-links">
-                                    <a href="https://avn-eesh-01.github.io/homepage/" target="_blank"
-                                        class="project-link">
+                                    <a href="https://elitenovaai.com" target="_blank" rel="noopener noreferrer"
+                                        class="project-link" aria-label="Visit Elite Nova AI">
                                         <i class="fas fa-link"></i>
-                                    </a>
-                                    <a href="https://github.com/avn-eesh-01/homepage" target="_blank"
-                                        class="project-link">
-                                        <i class="fab fa-github"></i>
                                     </a>
                                 </div>
                             </div>
                         </div>
                         <div class="project-info">
-                            <h3 class="project-title">Upsight</h3>
-                            <p class="project-description">A website for Upsight, an agency that provides marketing
-                                services. Added a new launchpad section that demonstrates company's new offers and
-                                packages.</p>
+                            <p class="project-kicker">Case study / Automation agency</p>
+                            <h3 class="project-title">EliteNova AI — Launch Website for an Automation Agency</h3>
+                            <dl class="case-study">
+                                <div class="case-study__item">
+                                    <dt>Role</dt>
+                                    <dd>Full-Stack Developer</dd>
+                                </div>
+                                <div class="case-study__item">
+                                    <dt>Challenge</dt>
+                                    <dd>Elitenova AI is a new automation agency with no existing online presence. It needed a premium-quality website to launch the business and showcase its services from day one.</dd>
+                                </div>
+                                <div class="case-study__item">
+                                    <dt>What I Did</dt>
+                                    <dd>Built the website from the ground up, including Three.js 3D visual elements to create the premium feel the team wanted and showcase services at launch.</dd>
+                                </div>
+                                <div class="case-study__item case-study__item--result">
+                                    <dt>Result</dt>
+                                    <dd>Established Elitenova AI’s online presence and service showcase at launch.</dd>
+                                </div>
+                            </dl>
                             <div class="project-tech">
                                 <span>HTML</span>
                                 <span>Tailwind CSS</span>
-                                <span>JavaScript</span>
-                                <span>GSAP</span>
+                                <span>Three.js</span>
                             </div>
                         </div>
                     </div>
@@ -505,7 +566,7 @@
                         </li>
                         <li>
                             <i class="fas fa-map-marker-alt"></i>
-                            <span>Raipur, Chhattisgarh, India</span>
+                            <span>Delhi, India</span>
                         </li>
                     </ul>
                 </div>
@@ -967,7 +1028,7 @@
                     // Animate to next card
                     activeIndex++;
                     updateCards(0);
-                }, 1500); // 3 seconds
+                }, 5000); // Give each message time to be read
             }
 
             function stopAutoPlay() {
@@ -994,7 +1055,7 @@
             updateCards();
             startAutoPlay(); // Start automatically
 
-            cards.forEach(c => c.querySelector('img').addEventListener('dragstart', e => e.preventDefault()));
+            cards.forEach(card => card.addEventListener('dragstart', e => e.preventDefault()));
         });
 
     </script>
